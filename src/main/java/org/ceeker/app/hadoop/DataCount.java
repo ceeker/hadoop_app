@@ -51,6 +51,7 @@ public class DataCount {
 			}
 			DataBean bean = new DataBean("", up_sum, down_sum);
 			context.write(key, bean);
+
 		}
 		
 		

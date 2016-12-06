@@ -1,2 +1,2 @@
 # hadoop_app
-- this is a simple hadoop demo!
+- This is a simple hadoop demo to show how to use MapReduce!
