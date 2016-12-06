@@ -28,9 +28,9 @@ public class DataCount {
 			//split
 			String[] fields = line.split("\t");
 			String tel = fields[1];
-			long up = Long.parseLong(fields[8]);
-			long down = Long.parseLong(fields[9]);	
-			DataBean bean = new DataBean(tel, up, down);
+            long up = Long.parseLong(fields[1]);
+            long down = Long.parseLong(fields[2]);
+            DataBean bean = new DataBean(tel, up, down);
 			//send
 			context.write(new Text(tel), bean);
 		}
@@ -74,6 +74,6 @@ public class DataCount {
 		FileOutputFormat.setOutputPath(job, new Path(args[1]));
 		
 		job.waitForCompletion(true);
-		
-	}
+
+    }
 }
